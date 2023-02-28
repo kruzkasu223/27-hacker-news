@@ -3,9 +3,9 @@ import { useTypedQuery } from "@/hooks"
 import { TNews } from "@/types"
 import { useState } from "react"
 
-export default function Home() {
+export default function Ask() {
   const [page, setPage] = useState(1)
-  const { data, isLoading, isError } = useTypedQuery<TNews[]>("news", page)
+  const { data, isLoading, isError } = useTypedQuery<TNews[]>("ask", page)
 
   const onPrev = () => setPage((page) => (page !== 1 ? page - 1 : page))
   const onNext = () => setPage((page) => page + 1)
